@@ -1,0 +1,21 @@
+
+<div class="container color-dark" >
+    <div class="col">
+        <h1>Delete Quiz </h1>
+    </div>
+    
+</div>
+
+<div class="container color-light" *ngIf="!quizReceived" >
+    <div class="col">
+        <p class="life-containter"  >
+            No quiz is found </p>
+    </div>
+</div>
+
+<div class="container color-light" *ngIf="quizReceived" >
+    <div class="col">
+        <p class="life-containter" *ngFor="let quiz of quizzes; let i=index" (click)="remQuiz(i)" >
+            {{i+1}} {{quiz.name}}</p>
+    </div>
+</div>
